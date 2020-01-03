@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.position += transform.up * Time.deltaTime * 5f;
     }

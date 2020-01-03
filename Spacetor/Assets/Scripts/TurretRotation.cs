@@ -6,14 +6,16 @@ public class TurretRotation : MonoBehaviour
     private Quaternion rotationZ;
     private float rotationSpeed = 0.2f;
 
-    void Update()
+    void FixedUpdate()
     {
+        /*
         if (Input.GetMouseButton(0))
         {
             float XaxisRotation = Input.GetAxis("Mouse X") * 20;
             //float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
             transform.Rotate(Vector3.forward, XaxisRotation);
         }
+        */
 
         if (Input.touchCount > 0)
         {
