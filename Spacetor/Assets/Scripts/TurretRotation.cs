@@ -3,15 +3,15 @@
 public class TurretRotation : MonoBehaviour
 {
     private Touch touch;
-    private float rotationSpeed = 0.2f;
     private Quaternion rotationZ;
+    private float rotationSpeed = 0.2f;
 
     void Update()
     {
         if (Input.GetMouseButton(0))
         {
-            float XaxisRotation = Input.GetAxis("Mouse X") * rotationSpeed;
-            float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
+            float XaxisRotation = Input.GetAxis("Mouse X") * 20;
+            //float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
             transform.Rotate(Vector3.forward, XaxisRotation);
         }
 
