@@ -8,7 +8,7 @@ public class TurretShooting : MonoBehaviour
     public GameObject SpawnPoint;
     public Transform Turret;
 
-    float time = 0.2f;
+    float time = 0.1f;
 
     void Update()
     {
@@ -24,7 +24,7 @@ public class TurretShooting : MonoBehaviour
             else
             {
                 SpawnProjectile();
-                time = 0.2f;
+                time = 0.1f;
             }
 
         }
@@ -40,7 +40,7 @@ public class TurretShooting : MonoBehaviour
         while (Input.touchCount > 0)
         {
             SpawnProjectile();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

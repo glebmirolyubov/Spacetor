@@ -4,11 +4,20 @@ public class Projectile : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 1.5f);
     }
 
     void FixedUpdate()
     {
-        transform.position += transform.up * Time.deltaTime * 5f;
+        transform.position += transform.up * Time.deltaTime * 10f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Drone")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
