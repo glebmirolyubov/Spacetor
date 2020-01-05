@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-firstpass.dll:
+    - QuickEngine.Utils.FontAwesomeReferences
     Assembly-CSharp.dll:
     - EnemyDrone
     - EnemyDroneSpawner
@@ -57,11 +59,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 96
       Script: {instanceID: 0}
@@ -70,37 +78,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9700}
+      Script: {instanceID: 9704}
     - Class: 114
-      Script: {instanceID: 9762}
+      Script: {instanceID: 9766}
     - Class: 114
-      Script: {instanceID: 9866}
+      Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 9886}
+      Script: {instanceID: 9890}
     - Class: 114
-      Script: {instanceID: 9914}
+      Script: {instanceID: 9918}
     - Class: 114
-      Script: {instanceID: 10200}
+      Script: {instanceID: 10204}
     - Class: 114
-      Script: {instanceID: 10326}
+      Script: {instanceID: 10330}
     - Class: 114
-      Script: {instanceID: 10504}
+      Script: {instanceID: 10508}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10736}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 10800}
     - Class: 114
-      Script: {instanceID: 10824}
+      Script: {instanceID: 10828}
     - Class: 114
-      Script: {instanceID: 11220}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11398}
+      Script: {instanceID: 11402}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11614}
     - Class: 114
-      Script: {instanceID: 11660}
+      Script: {instanceID: 11664}
+    - Class: 114
+      Script: {instanceID: 23010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -792,6 +802,168 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 2ef7afeabed6d4e8be9d2fbd75f2cddf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Hit
+  - hash:
+      serializedVersion: 2
+      Hash: cefc42c2cb25819ed10824bfe940c3dc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
+    className: GlobalFog
+  - hash:
+      serializedVersion: 2
+      Hash: bb16fc875bc65411dbf5a020b5162d82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: SpriteChanger
+  - hash:
+      serializedVersion: 2
+      Hash: 793324edff53285ce50238d18f3fb534
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly
+    className: PoolySpawner
+  - hash:
+      serializedVersion: 2
+      Hash: 2fbb84c199b44cd4c57b45de1e20b787
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: TransformProperties
+  - hash:
+      serializedVersion: 2
+      Hash: 31d05fd385a1fff63731b781c37e9b18
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: CycleScale
+  - hash:
+      serializedVersion: 2
+      Hash: a3bb5edc6b77f0c61e3deca21cff1e05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: SetRotation
+  - hash:
+      serializedVersion: 2
+      Hash: f2a936353b2e79b38086bf054e6ddd35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BlockBreaker
+  - hash:
+      serializedVersion: 2
+      Hash: 2677ace1cdf1b9f318906f077a7055be
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Examples
+    className: SceneController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Examples
+    className: SimpleSceneLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 122d7ffab68b4eedc72a1fce03e63c2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
+    className: BloomOptimized
+  - hash:
+      serializedVersion: 2
+      Hash: 35381bec5ab03605e8c514925a5a3fe1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Statistics
+    className: PoolyStatistics
+  - hash:
+      serializedVersion: 2
+      Hash: ed585437f32963a51825c2d26ba8c2c7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly
+    className: Pooly
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Force
+  - hash:
+      serializedVersion: 2
+      Hash: 59b9ab52f626c259e4011124a9d3d420
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: ModifyScale
+  - hash:
+      serializedVersion: 2
+      Hash: 43f5b2595e41dd493d347eedf61a3512
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Examples
+    className: SceneControllerHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 3df5b30a20fbb4d6ef5edb07cf8c9a51
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly
+    className: PoolyDespawner
+  - hash:
+      serializedVersion: 2
+      Hash: e7fc8f7043abf6d729c0be947cb873ff
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: AutoRotate
+  - hash:
+      serializedVersion: 2
+      Hash: 7cc08018134d0d6eefdf182c1392291a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly
+    className: PoolyExtension
+  - hash:
+      serializedVersion: 2
+      Hash: 84631df2a916075530c5fd513ffcbb67
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: QuickEngine.Utils
+    className: FontAwesomeReferences
+  - hash:
+      serializedVersion: 2
+      Hash: 029838a14d9eab10fda5cbecbb2d3960
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: SceneController
+  - hash:
+      serializedVersion: 2
+      Hash: ef1f717ee92bbae6e2d0a3dd9e06da4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Examples
+    className: PoolyProjectile
+  - hash:
+      serializedVersion: 2
+      Hash: d98e4f013416e2cfcab82ca3bfe6c4a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly.Examples
+    className: RandomizeSound
+  - hash:
+      serializedVersion: 2
+      Hash: b3d3aac9888263e05ddce24ad1cc19d2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: CycleMaterials
+  - hash:
+      serializedVersion: 2
+      Hash: 8575b09a943ca1c772aef34b9eb75239
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples
+    className: SetMaterialColor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
+    className: PostEffectsBase
+  - hash:
+      serializedVersion: 2
+      Hash: 3cbcc58b8b10eb497a9b7b3ff22ffc30
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Ez.Pooly
+    className: PoolySettings
   platform: 9
   scenePathNames:
   - Assets/Scenes/Prototype.unity
