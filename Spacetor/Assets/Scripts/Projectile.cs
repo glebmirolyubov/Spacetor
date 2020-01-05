@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
     {
         if (collision.tag == "Drone")
         {
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject.transform.parent.gameObject);
             Destroy(gameObject);
         }
     }

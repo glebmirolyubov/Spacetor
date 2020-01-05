@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 5525614076989434205}
   - component: {fileID: 5532912293668814703}
   - component: {fileID: 5542876272122109971}
-  - component: {fileID: 5530417354345093659}
   - component: {fileID: 2637553679758462221}
   - component: {fileID: -210635604636390039}
   m_Layer: 0
@@ -61,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 5528628362872234409}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 1.19, y: 3.72, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1397897333528400947}
   m_Father: {fileID: 0}
@@ -113,22 +112,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5530417354345093659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5528628362872234409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35afcb7720f514241befff4c15d8e8c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 7664849723604767283, guid: b8c92a7ce95a64fb8812bb4f95b1bbd1,
-    type: 3}
-  SpawnPoint: {fileID: 5260295356506965602}
-  ChargeParticle: {fileID: 7615863660813006034}
 --- !u!58 &2637553679758462221
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -235,12 +218,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bfeafaf396188547a6546ac8a2c2834, type: 3}
---- !u!1 &7615863660813006034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1857852141784182, guid: 6bfeafaf396188547a6546ac8a2c2834,
-    type: 3}
-  m_PrefabInstance: {fileID: 7617383652554733732}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7618303561162154208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4438365421017156, guid: 6bfeafaf396188547a6546ac8a2c2834,

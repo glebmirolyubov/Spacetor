@@ -11,7 +11,7 @@ public class EnemyDroneSpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemyDrone", 1f, 5f);
+        InvokeRepeating("SpawnEnemyDrone", 1f, 3f);
     }
 
     void SpawnEnemyDrone()

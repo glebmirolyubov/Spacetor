@@ -13,7 +13,7 @@ public class EnemyDrone : MonoBehaviour
     void Start()
     {
         shootTimer = Random.Range(3f, 6f);
-        //Invoke("ShootProjectile", shootTimer);
+        //SpawnDroneOffScreen();
     }
 
     void Update()
@@ -41,6 +41,10 @@ public class EnemyDrone : MonoBehaviour
         Instantiate(ProjectilePrefab, SpawnPoint.transform.position, transform.rotation);
         shootTimer = Random.Range(3f, 6f);
         ChargeParticle.transform.localScale = Vector3.zero;
-        //Invoke("ShootProjectile", shootTimer);
+    }
+
+    void SpawnDroneOffScreen()
+    {
+        transform.GetChild(0).localPosition = new Vector3(transform.GetChild(0).localPosition.x, transform.GetChild(0).localPosition.y, -30f);
     }
 }

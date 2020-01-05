@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874cf8af887894442a60bd1dd9055317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DronePrefab: {fileID: 5528628362872234409, guid: 585b4ae63210c4212aa15cc7d5a45c7f,
+  DronePrefab: {fileID: 1367581984658685429, guid: 2066adde961f7426494345f58530a040,
     type: 3}
 --- !u!20 &519420031
 Camera:
@@ -357,7 +357,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
 --- !u!50 &533585486
 Rigidbody2D:
   serializedVersion: 4
