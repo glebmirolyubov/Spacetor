@@ -135,11 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDrone
       objectReference: {fileID: 0}
-    - target: {fileID: 5542876272122109971, guid: 585b4ae63210c4212aa15cc7d5a45c7f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585b4ae63210c4212aa15cc7d5a45c7f, type: 3}
 --- !u!4 &2442664963307513663 stripped

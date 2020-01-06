@@ -9,30 +9,36 @@ public class EnemyDrone : MonoBehaviour
     public GameObject ChargeParticle;
 
     private float shootTimer;
+    private bool allowCharge;
 
     void Start()
     {
         shootTimer = Random.Range(3f, 6f);
-        //SpawnDroneOffScreen();
+        ChargeParticle.SetActive(false);
+        allowCharge = false;
     }
 
     void Update()
     {
         transform.LookAt(new Vector3(0f, 0f, 0f), Vector3.back);
 
-        shootTimer -= Time.deltaTime;
-        if (shootTimer < 0)
+        if (allowCharge)
         {
-            ShootProjectile();
-        } else
-        {
-            ChargeWeapon();
+            shootTimer -= Time.deltaTime;
+            if (shootTimer < 0)
+            {
+                ShootProjectile();
+            }
+            else
+            {
+                ChargeWeapon();
+            }
         }
     }
 
     void ChargeWeapon()
     {
-        float newScale = Mathf.Lerp(0, 5, Time.deltaTime / (shootTimer*0.1f));
+        float newScale = Mathf.Lerp(0, 5, Time.deltaTime / (shootTimer * 0.05f));
         ChargeParticle.transform.localScale = new Vector3(newScale, newScale, newScale);
     }
 
@@ -43,8 +49,9 @@ public class EnemyDrone : MonoBehaviour
         ChargeParticle.transform.localScale = Vector3.zero;
     }
 
-    void SpawnDroneOffScreen()
+    public void ActivateChargeParticle()
     {
-        transform.GetChild(0).localPosition = new Vector3(transform.GetChild(0).localPosition.x, transform.GetChild(0).localPosition.y, -30f);
+        ChargeParticle.SetActive(true);
+        allowCharge = true;
     }
 }
