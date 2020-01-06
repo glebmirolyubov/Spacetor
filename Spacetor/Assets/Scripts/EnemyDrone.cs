@@ -9,7 +9,8 @@ public class EnemyDrone : MonoBehaviour
     public GameObject ChargeParticle;
 
     private float shootTimer;
-    private bool allowCharge;
+
+    public bool allowCharge;
 
     void Start()
     {
@@ -53,5 +54,10 @@ public class EnemyDrone : MonoBehaviour
     {
         ChargeParticle.SetActive(true);
         allowCharge = true;
+    }
+
+    public void DestroyShip()
+    {
+        Destroy(gameObject);
     }
 }
