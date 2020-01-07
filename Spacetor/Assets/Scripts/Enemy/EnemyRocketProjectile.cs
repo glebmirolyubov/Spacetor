@@ -25,9 +25,8 @@ public class EnemyRocketProjectile : MonoBehaviour
     {
         death = true;
         missleEffect.SetActive(false);
-        explosionEffect.SetActive(true);
-        GetComponent<MeshRenderer>().enabled = false;
-        Destroy(gameObject, 2f);
+        Instantiate(explosionEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,10 +34,10 @@ public class EnemyRocketProjectile : MonoBehaviour
         if (collision.tag == "Turret")
         {
             Health.health -= 20;
+            death = true;
             missleEffect.SetActive(false);
-            explosionEffect.SetActive(true);
-            GetComponent<MeshRenderer>().enabled = false;
-            Destroy(gameObject, 2f);
+            Instantiate(explosionEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

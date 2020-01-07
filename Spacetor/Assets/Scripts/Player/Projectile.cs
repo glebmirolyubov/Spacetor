@@ -23,6 +23,15 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.tag == "RocketDrone")
+        {
+            if (collision.gameObject.transform.parent.gameObject.GetComponent<EnemyRocketDrone>().allowShooting == true)
+            {
+                collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+            }
+            Destroy(gameObject);
+        }
+
         if (collision.tag == "Rocket")
         {
             collision.gameObject.GetComponent<EnemyRocketProjectile>().DeathSequence();
