@@ -239,6 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DronePrefab: {fileID: 1367581984658685429, guid: 2066adde961f7426494345f58530a040,
     type: 3}
+  RocketDronePrefab: {fileID: 3234388192980615866, guid: 2b3912da8074d419f985b40a394d983a,
+    type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

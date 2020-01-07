@@ -17,11 +17,29 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.Postprocessing.Runtime.dll:
+    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
+    - UnityEngine.Rendering.PostProcessing.AutoExposure
+    - UnityEngine.Rendering.PostProcessing.Bloom
+    - UnityEngine.Rendering.PostProcessing.ChromaticAberration
+    - UnityEngine.Rendering.PostProcessing.ColorGrading
+    - UnityEngine.Rendering.PostProcessing.DepthOfField
+    - UnityEngine.Rendering.PostProcessing.Grain
+    - UnityEngine.Rendering.PostProcessing.LensDistortion
+    - UnityEngine.Rendering.PostProcessing.MotionBlur
+    - UnityEngine.Rendering.PostProcessing.PostProcessLayer
+    - UnityEngine.Rendering.PostProcessing.PostProcessProfile
+    - UnityEngine.Rendering.PostProcessing.PostProcessResources
+    - UnityEngine.Rendering.PostProcessing.PostProcessVolume
+    - UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
+    - UnityEngine.Rendering.PostProcessing.Vignette
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -59,6 +77,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 72
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -78,39 +100,47 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9704}
+      Script: {instanceID: 9710}
     - Class: 114
-      Script: {instanceID: 9766}
+      Script: {instanceID: 9774}
     - Class: 114
-      Script: {instanceID: 9870}
+      Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 9890}
+      Script: {instanceID: 9906}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10244}
     - Class: 114
-      Script: {instanceID: 10330}
-    - Class: 114
-      Script: {instanceID: 10508}
+      Script: {instanceID: 10386}
     - Class: 114
       Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 10680}
     - Class: 114
-      Script: {instanceID: 10800}
+      Script: {instanceID: 10834}
     - Class: 114
-      Script: {instanceID: 10828}
+      Script: {instanceID: 10898}
+    - Class: 114
+      Script: {instanceID: 10926}
     - Class: 114
       Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11402}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11614}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11664}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 23010}
+      Script: {instanceID: 11834}
+    - Class: 114
+      Script: {instanceID: 31260}
+    - Class: 114
+      Script: {instanceID: 35430}
+    - Class: 114
+      Script: {instanceID: 35526}
+    - Class: 114
+      Script: {instanceID: 35590}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -450,7 +480,7 @@ ScriptsOnlyBuild:
     className: BasicAI
   - hash:
       serializedVersion: 2
-      Hash: fdb49b89879f8859e8e77c3c8c16f534
+      Hash: 2e691cbb49cac3e27d3679b67c4dfb41
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyDrone
@@ -598,6 +628,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIcoroutines
+  - hash:
+      serializedVersion: 2
+      Hash: 84631df2a916075530c5fd513ffcbb67
+    assemblyName: Assembly-CSharp-firstpass.dll
+    namespaceName: QuickEngine.Utils
+    className: FontAwesomeReferences
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -804,166 +840,106 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 2ef7afeabed6d4e8be9d2fbd75f2cddf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Hit
+      Hash: 38bcb4d3f9a1812fd650f92e87a4cf64
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessProfile
   - hash:
       serializedVersion: 2
-      Hash: cefc42c2cb25819ed10824bfe940c3dc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
-    className: GlobalFog
+      Hash: a1f19ad47d3094e235f21b74dfc423a8
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessLayer
   - hash:
       serializedVersion: 2
-      Hash: bb16fc875bc65411dbf5a020b5162d82
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: SpriteChanger
+      Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ColorGrading
   - hash:
       serializedVersion: 2
-      Hash: 793324edff53285ce50238d18f3fb534
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly
-    className: PoolySpawner
+      Hash: b13de7a0a457cb8e026d4237dc1b5797
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: LensDistortion
   - hash:
       serializedVersion: 2
-      Hash: 2fbb84c199b44cd4c57b45de1e20b787
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: TransformProperties
+      Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Bloom
   - hash:
       serializedVersion: 2
-      Hash: 31d05fd385a1fff63731b781c37e9b18
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: CycleScale
+      Hash: af93f9c42e90877a9ba31e37adfd900c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: MotionBlur
   - hash:
       serializedVersion: 2
-      Hash: a3bb5edc6b77f0c61e3deca21cff1e05
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: SetRotation
+      Hash: f542c1afca5bb4022f91fdda19b8d622
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: f2a936353b2e79b38086bf054e6ddd35
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BlockBreaker
+      Hash: 63d7b9b64a11859f416d72ba9a3c3fec
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
-      Hash: 2677ace1cdf1b9f318906f077a7055be
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Examples
-    className: SceneController
+      Hash: e82c0521cdfe8cb6a168ef7208a98d4a
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Vignette
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Examples
-    className: SimpleSceneLoader
+      Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessEffectSettings
   - hash:
       serializedVersion: 2
-      Hash: 122d7ffab68b4eedc72a1fce03e63c2f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
-    className: BloomOptimized
+      Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: 35381bec5ab03605e8c514925a5a3fe1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Statistics
-    className: PoolyStatistics
+      Hash: d6fc8d3165070298511ec776ea575626
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessResources
   - hash:
       serializedVersion: 2
-      Hash: ed585437f32963a51825c2d26ba8c2c7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly
-    className: Pooly
+      Hash: a53651ee3996fbba20dfe0fce02f0b23
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Force
+      Hash: 50c443b12ccc0b475183318b5088bcc5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessDebug
   - hash:
       serializedVersion: 2
-      Hash: 59b9ab52f626c259e4011124a9d3d420
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: ModifyScale
+      Hash: d5630f96bd5a6a6eed7e1754c3fb8703
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessVolume
   - hash:
       serializedVersion: 2
-      Hash: 43f5b2595e41dd493d347eedf61a3512
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Examples
-    className: SceneControllerHelper
+      Hash: d0987ce3e9092dbe0fa30d73f333fffa
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Grain
   - hash:
       serializedVersion: 2
-      Hash: 3df5b30a20fbb4d6ef5edb07cf8c9a51
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly
-    className: PoolyDespawner
-  - hash:
-      serializedVersion: 2
-      Hash: e7fc8f7043abf6d729c0be947cb873ff
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: AutoRotate
-  - hash:
-      serializedVersion: 2
-      Hash: 7cc08018134d0d6eefdf182c1392291a
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly
-    className: PoolyExtension
-  - hash:
-      serializedVersion: 2
-      Hash: 84631df2a916075530c5fd513ffcbb67
-    assemblyName: Assembly-CSharp-firstpass.dll
-    namespaceName: QuickEngine.Utils
-    className: FontAwesomeReferences
-  - hash:
-      serializedVersion: 2
-      Hash: 029838a14d9eab10fda5cbecbb2d3960
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: SceneController
-  - hash:
-      serializedVersion: 2
-      Hash: ef1f717ee92bbae6e2d0a3dd9e06da4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Examples
-    className: PoolyProjectile
-  - hash:
-      serializedVersion: 2
-      Hash: d98e4f013416e2cfcab82ca3bfe6c4a8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly.Examples
-    className: RandomizeSound
-  - hash:
-      serializedVersion: 2
-      Hash: b3d3aac9888263e05ddce24ad1cc19d2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: CycleMaterials
-  - hash:
-      serializedVersion: 2
-      Hash: 8575b09a943ca1c772aef34b9eb75239
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples
-    className: SetMaterialColor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Examples.Shared.UnityStandardAssets.ImageEffects
-    className: PostEffectsBase
-  - hash:
-      serializedVersion: 2
-      Hash: 3cbcc58b8b10eb497a9b7b3ff22ffc30
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Ez.Pooly
-    className: PoolySettings
+      Hash: ac6acd886c54c48c599ab5fed5781ea7
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AmbientOcclusion
   platform: 9
   scenePathNames:
   - Assets/Scenes/Prototype.unity

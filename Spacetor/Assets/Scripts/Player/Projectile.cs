@@ -1,0 +1,32 @@
+﻿using UnityEngine;
+
+public class Projectile : MonoBehaviour
+{
+    void Start()
+    {
+        Destroy(gameObject, 1.5f);
+    }
+
+    void FixedUpdate()
+    {
+        transform.position += transform.up * Time.deltaTime * 10f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Drone")
+        {
+            if (collision.gameObject.transform.parent.gameObject.GetComponent<EnemyDrone>().allowCharge == true)
+            {
+                collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+            }
+            Destroy(gameObject);
+        }
+
+        if (collision.tag == "Rocket")
+        {
+            collision.gameObject.GetComponent<EnemyRocketProjectile>().DeathSequence();
+            Destroy(gameObject);
+        }
+    }
+}
