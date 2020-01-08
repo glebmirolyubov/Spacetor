@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public static int health;
 
     public GameObject deathCanvas;
-    public Text healthText;
+    public GameObject HealthHolder;
 
     private bool death;
 
@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        healthText.text = health.ToString();
+        HealthHolder.transform.localScale = new Vector3(health * 0.01f, 1f, 1f);
 
         if (health <= 0 && !death)
         {
@@ -36,6 +36,7 @@ public class Health : MonoBehaviour
 
     void Death()
     {
+        health = 0;
         deathCanvas.SetActive(true);
         Time.timeScale = 0;
     }

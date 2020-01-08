@@ -27,6 +27,7 @@ public class Projectile : MonoBehaviour
                 else
                 {
                     collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+                    Score.score += 2;
                 }
             }
             Destroy(gameObject);
@@ -37,6 +38,7 @@ public class Projectile : MonoBehaviour
             if (collision.gameObject.transform.parent.gameObject.GetComponent<EnemyRocketDrone>().allowShooting == true)
             {
                 collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+                Score.score += 3;
             }
             Destroy(gameObject);
         }
@@ -44,6 +46,7 @@ public class Projectile : MonoBehaviour
         if (collision.tag == "Rocket")
         {
             collision.gameObject.GetComponent<EnemyRocketProjectile>().DeathSequence();
+            Score.score++;
             Destroy(gameObject);
         }
     }
