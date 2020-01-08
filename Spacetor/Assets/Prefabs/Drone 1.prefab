@@ -50,7 +50,9 @@ MonoBehaviour:
     type: 3}
   SpawnPoint: {fileID: 2614525041078618112}
   ChargeParticle: {fileID: 358038144508394160}
+  FireParticle: {fileID: 2803555468602608793}
   allowCharge: 0
+  droneHealth: 0
 --- !u!95 &5942451297314953619
 Animator:
   serializedVersion: 3
@@ -137,11 +139,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueDrone
       objectReference: {fileID: 0}
-    - target: {fileID: 5542876272122109971, guid: 585b4ae63210c4212aa15cc7d5a45c7f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 585b4ae63210c4212aa15cc7d5a45c7f, type: 3}
 --- !u!4 &2442664963307513663 stripped
@@ -159,6 +156,12 @@ GameObject:
 --- !u!1 &358038144508394160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7615863660813006034, guid: 585b4ae63210c4212aa15cc7d5a45c7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7874819296728632930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2803555468602608793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5449567436058608379, guid: 585b4ae63210c4212aa15cc7d5a45c7f,
     type: 3}
   m_PrefabInstance: {fileID: 7874819296728632930}
   m_PrefabAsset: {fileID: 0}

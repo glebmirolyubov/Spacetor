@@ -7,16 +7,20 @@ public class EnemyDrone : MonoBehaviour
     public GameObject ProjectilePrefab;
     public GameObject SpawnPoint;
     public GameObject ChargeParticle;
+    public GameObject FireParticle;
 
     private float shootTimer;
 
     public bool allowCharge;
+    public int droneHealth;
 
     void Start()
     {
         shootTimer = Random.Range(3f, 6f);
         ChargeParticle.SetActive(false);
         allowCharge = false;
+        FireParticle.SetActive(false);
+        droneHealth = 2;
     }
 
     void Update()

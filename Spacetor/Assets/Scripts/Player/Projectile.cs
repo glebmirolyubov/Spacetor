@@ -18,7 +18,16 @@ public class Projectile : MonoBehaviour
         {
             if (collision.gameObject.transform.parent.gameObject.GetComponent<EnemyDrone>().allowCharge == true)
             {
-                collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+                collision.gameObject.transform.parent.gameObject.GetComponent<EnemyDrone>().droneHealth -= 1;
+
+                if (collision.gameObject.transform.parent.gameObject.GetComponent<EnemyDrone>().droneHealth == 1)
+                {
+                    collision.gameObject.transform.parent.gameObject.GetComponent<EnemyDrone>().FireParticle.SetActive(true);
+                }
+                else
+                {
+                    collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().SetTrigger("Death");
+                }
             }
             Destroy(gameObject);
         }
