@@ -6,8 +6,9 @@ public class Health : MonoBehaviour
 {
     public static int health;
 
-    public GameObject deathCanvas;
     public GameObject HealthHolder;
+    public GameObject PlayerExplosion;
+    public GameObject Player;
 
     private bool death;
 
@@ -20,7 +21,6 @@ public class Health : MonoBehaviour
     {
         health = 100;
         death = false;
-        deathCanvas.SetActive(false);
     }
 
     void Update()
@@ -36,8 +36,14 @@ public class Health : MonoBehaviour
 
     void Death()
     {
+        Player.SetActive(false);
+        Instantiate(PlayerExplosion, Player.transform.position, Quaternion.identity);
         health = 0;
-        deathCanvas.SetActive(true);
+        GetComponent<Animator>().SetTrigger("Death");
+    }
+
+    public void FinishDeath()
+    {
         Time.timeScale = 0;
     }
 
