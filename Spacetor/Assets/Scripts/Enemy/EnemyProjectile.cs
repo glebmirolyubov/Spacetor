@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
+
     void FixedUpdate()
     {
         transform.position += transform.forward * Time.deltaTime * 10f;
@@ -13,7 +14,8 @@ public class EnemyProjectile : MonoBehaviour
     {
         if (collision.tag == "Turret")
         {
-            Health.health -= 10;
+            PlayerManager.health -= 10;
+            Camera.main.gameObject.GetComponent<CameraShake>().StartCoroutine("ShakeNormal");
             Destroy(gameObject);
         }
     }

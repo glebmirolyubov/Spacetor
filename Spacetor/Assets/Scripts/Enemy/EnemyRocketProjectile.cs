@@ -33,7 +33,8 @@ public class EnemyRocketProjectile : MonoBehaviour
     {
         if (collision.tag == "Turret")
         {
-            Health.health -= 20;
+            PlayerManager.health -= 20;
+            Camera.main.gameObject.GetComponent<CameraShake>().StartCoroutine("ShakeRocket");
             death = true;
             missleEffect.SetActive(false);
             Instantiate(explosionEffect, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
