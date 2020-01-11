@@ -34,6 +34,7 @@ public class TurretRotation : MonoBehaviour
                 }
 
                 transform.rotation = rotationZ * transform.rotation;
+                transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
             }
 
         }

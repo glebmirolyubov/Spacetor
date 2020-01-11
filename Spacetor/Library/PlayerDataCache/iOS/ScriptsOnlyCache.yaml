@@ -327,7 +327,7 @@ ScriptsOnlyBuild:
     className: TMP_PhoneNumberValidator
   - hash:
       serializedVersion: 2
-      Hash: d558dc7651a9c6c6f06290abc03d418a
+      Hash: 5e44d4ec5d5a1c6c73f3117636bdd665
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
