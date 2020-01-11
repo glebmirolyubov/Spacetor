@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - QuickEngine.Utils.FontAwesomeReferences
     Assembly-CSharp.dll:
     - AudioManager
+    - CameraShake
     - EnemyDrone
     - EnemyDroneSpawner
     - EnemyProjectile
@@ -14,6 +15,7 @@ ScriptsOnlyBuild:
     - Projectile
     - Score
     - SelfDustructExplosion
+    - StoresSetup
     - TurretRotation
     - TurretShooting
     Unity.2D.Tilemap.Editor.dll:
@@ -58,6 +60,8 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.Advertisements.dll:
+    - UnityEngine.Advertisements.Editor.Placeholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -67,7 +71,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
   sceneClasses:
-    Assets/Scenes/Prototype.unity:
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -121,71 +125,75 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9820}
     - Class: 114
-      Script: {instanceID: 9836}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9918}
+      Script: {instanceID: 9926}
     - Class: 114
-      Script: {instanceID: 9988}
+      Script: {instanceID: 9996}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10152}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10326}
+      Script: {instanceID: 10340}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10550}
+      Script: {instanceID: 10564}
     - Class: 114
-      Script: {instanceID: 10574}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 10744}
+      Script: {instanceID: 10760}
     - Class: 114
-      Script: {instanceID: 10788}
+      Script: {instanceID: 10804}
     - Class: 114
-      Script: {instanceID: 11026}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11122}
     - Class: 114
-      Script: {instanceID: 11162}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11230}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11370}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11434}
+      Script: {instanceID: 11388}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11452}
     - Class: 114
       Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11754}
+      Script: {instanceID: 11718}
     - Class: 114
-      Script: {instanceID: 11896}
+      Script: {instanceID: 11772}
     - Class: 114
-      Script: {instanceID: 11984}
+      Script: {instanceID: 11816}
     - Class: 114
-      Script: {instanceID: 12074}
+      Script: {instanceID: 11916}
     - Class: 114
-      Script: {instanceID: 12204}
+      Script: {instanceID: 12004}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12096}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 12226}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12370}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12506}
     - Class: 114
-      Script: {instanceID: 12730}
+      Script: {instanceID: 12538}
     - Class: 114
-      Script: {instanceID: 35136}
+      Script: {instanceID: 12680}
+    - Class: 114
+      Script: {instanceID: 12754}
+    - Class: 114
+      Script: {instanceID: 27782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -319,7 +327,7 @@ ScriptsOnlyBuild:
     className: TMP_PhoneNumberValidator
   - hash:
       serializedVersion: 2
-      Hash: 284e287c97f1b8dc48182bb1cdffee90
+      Hash: d558dc7651a9c6c6f06290abc03d418a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerManager
@@ -371,6 +379,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: TiltInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -631,6 +651,12 @@ ScriptsOnlyBuild:
     className: ColliderBehaviour
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraShake
+  - hash:
+      serializedVersion: 2
       Hash: 3375c3d749f8f4cad889721b431bdc27
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -673,7 +699,7 @@ ScriptsOnlyBuild:
     className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 959481814c790ea0e57169ed158d0d63
+      Hash: 23f130cc71df8bd8e75bfb9aea784c13
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score
@@ -833,6 +859,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelfDustructExplosion
+  - hash:
+      serializedVersion: 2
+      Hash: ed03070619bcf81126a1d0bcb51b5812
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
   - hash:
       serializedVersion: 2
       Hash: 36808e0bceda2a44a651d2c754474786
@@ -1171,11 +1203,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: ed03070619bcf81126a1d0bcb51b5812
+      Hash: a954b2b59b07ce34e9f955200ec87bf9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AudioManager
+    className: StoresSetup
   platform: 9
   scenePathNames:
-  - Assets/Scenes/Prototype.unity
+  - Assets/Scenes/Main.unity
   playerPath: /Users/gleb_mirolyubov/Desktop/Spacetor_iOS

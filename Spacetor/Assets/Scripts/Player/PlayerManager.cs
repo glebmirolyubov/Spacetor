@@ -11,7 +11,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject Player;
     public GameObject MusicSource;
     public GameObject StartPanel;
-    public GameObject Score;
+    public GameObject ScoreObject;
+    public StoresSetup storesSetup;
 
     private bool death;
 
@@ -44,6 +45,7 @@ public class PlayerManager : MonoBehaviour
         Player.SetActive(false);
         Instantiate(PlayerExplosion, Player.transform.position, Quaternion.identity);
         health = 0;
+        SetBestScore();
         GetComponent<Animator>().SetTrigger("Death");
     }
 
@@ -52,7 +54,6 @@ public class PlayerManager : MonoBehaviour
         Camera.main.GetComponent<Animator>().SetTrigger("StartGame");
         MusicSource.GetComponent<Animator>().SetTrigger("StartGame");
         GetComponent<Animator>().SetTrigger("StartGame");
-
     }
 
     public void FinishDeath()
@@ -71,6 +72,24 @@ public class PlayerManager : MonoBehaviour
         Camera.main.gameObject.GetComponent<EnemyDroneSpawner>().enabled = true;
         StartPanel.SetActive(false);
         HealthHolder.SetActive(true);
-        Score.SetActive(true);
+        ScoreObject.SetActive(true);
+    }
+
+    void SetBestScore()
+    {
+        if (PlayerPrefs.HasKey("Score"))
+        {
+
+            if (PlayerPrefs.GetInt("Score") < Score.score)
+            {
+                PlayerPrefs.SetInt("Score", Score.score);
+                storesSetup.PostScoreOnLeaderBoard(Score.score);
+            }
+
+        } else
+        {
+            PlayerPrefs.SetInt("Score", Score.score);
+        }
+
     }
 }

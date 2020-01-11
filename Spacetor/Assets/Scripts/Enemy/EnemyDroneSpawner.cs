@@ -12,9 +12,10 @@ public class EnemyDroneSpawner : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemyDroneFirstWave", 2f, 4f);
+        InvokeRepeating("SpawnEnemyDroneFirstWave", 2f, 3f);
         InvokeRepeating("SpawnEnemyRocketDroneFirstWave", 30f, 15f);
         InvokeRepeating("SpawnEnemyDroneSecondWave", 40f, 10f);
+        InvokeRepeating("SpawnEnemyRocketDroneSecondWave", 60f, 20f);
     }
 
     void SpawnEnemyDroneFirstWave()
@@ -43,6 +44,15 @@ public class EnemyDroneSpawner : MonoBehaviour
         Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
         Instantiate(DronePrefab, spawnPoint, Quaternion.identity);
 
+    }
+
+    void SpawnEnemyRocketDroneSecondWave()
+    {
+        xPoint = Random.Range(0.1f, 0.9f);
+        yPoint = Random.Range(0.1f, 0.2f);
+
+        Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
+        Instantiate(RocketDronePrefab, spawnPoint, Quaternion.identity);
     }
 
 }
