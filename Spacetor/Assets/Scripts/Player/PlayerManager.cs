@@ -12,7 +12,9 @@ public class PlayerManager : MonoBehaviour
     public GameObject MusicSource;
     public GameObject StartPanel;
     public GameObject ScoreObject;
+    public GameObject TutorialPanel;
     public StoresSetup storesSetup;
+    public EnemyDroneSpawner droneSpawner;
 
     private bool death;
 
@@ -21,6 +23,7 @@ public class PlayerManager : MonoBehaviour
         Time.timeScale = 1;
         Camera.main.orthographicSize = 1.5f;
         Camera.main.gameObject.GetComponent<EnemyDroneSpawner>().enabled = false;
+        PlayerPrefs.DeleteKey("Tutorial");
     }
 
     void Start()
@@ -69,10 +72,18 @@ public class PlayerManager : MonoBehaviour
 
     public void FinishStart()
     {
-        Camera.main.gameObject.GetComponent<EnemyDroneSpawner>().enabled = true;
         StartPanel.SetActive(false);
         HealthHolder.SetActive(true);
         ScoreObject.SetActive(true);
+
+        if (PlayerPrefs.HasKey("Tutorial"))
+        {
+            droneSpawner.enabled = true;
+        } else
+        {
+            GetComponent<Animator>().SetTrigger("Tutorial");
+            droneSpawner.enabled = false;
+        }
     }
 
     void SetBestScore()
@@ -91,5 +102,13 @@ public class PlayerManager : MonoBehaviour
             PlayerPrefs.SetInt("Score", Score.score);
         }
 
+    }
+
+    public void CompleteTutorial()
+    {
+        PlayerPrefs.SetInt("Tutorial", 1);
+        GetComponent<Animator>().SetTrigger("EndTutorial");
+        TutorialPanel.SetActive(false);
+        droneSpawner.enabled = true;
     }
 }
