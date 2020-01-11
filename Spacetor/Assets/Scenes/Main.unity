@@ -187,11 +187,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 362744070}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &228662091
@@ -239,6 +239,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1781546092}
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1875355204}
+        m_MethodName: HideBannerAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -516,8 +527,8 @@ RectTransform:
   m_Children:
   - {fileID: 751059101}
   - {fileID: 1151783080}
-  - {fileID: 228662090}
   - {fileID: 1489303101}
+  - {fileID: 228662090}
   m_Father: {fileID: 1781546090}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1337,7 +1348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &751059102
@@ -1869,7 +1880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -230}
+  m_AnchoredPosition: {x: 0, y: -180}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1151783081
@@ -2096,11 +2107,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 362744070}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -280}
+  m_AnchoredPosition: {x: 0, y: -240}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1489303102
@@ -2645,6 +2656,7 @@ MonoBehaviour:
   TutorialPanel: {fileID: 1388157401}
   storesSetup: {fileID: 1875355201}
   droneSpawner: {fileID: 519420030}
+  adSetup: {fileID: 1875355204}
 --- !u!1 &1875355200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,6 +2668,7 @@ GameObject:
   - component: {fileID: 1875355202}
   - component: {fileID: 1875355203}
   - component: {fileID: 1875355201}
+  - component: {fileID: 1875355204}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -2704,6 +2717,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 706399789}
   MenuScoreText: {fileID: 1151783081}
+--- !u!114 &1875355204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875355200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45dba64419b7140cc870be83bb53e651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placementBannerId: GameBanner
+  placementVideoId: 
 --- !u!1 &1957337275
 GameObject:
   m_ObjectHideFlags: 0

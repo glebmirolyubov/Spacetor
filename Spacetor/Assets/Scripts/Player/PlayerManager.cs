@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject TutorialPanel;
     public StoresSetup storesSetup;
     public EnemyDroneSpawner droneSpawner;
+    public AdSetup adSetup;
 
     private bool death;
 
@@ -49,6 +50,7 @@ public class PlayerManager : MonoBehaviour
         Instantiate(PlayerExplosion, Player.transform.position, Quaternion.identity);
         health = 0;
         SetBestScore();
+        adSetup.ShowCenterBanner();
         GetComponent<Animator>().SetTrigger("Death");
     }
 
