@@ -8,8 +8,13 @@ public class AdSetup : MonoBehaviour
     public string placementBannerId = "GameBanner";
     public string placementVideoId = "GameOverVideo";
 
+    #if UNITY_IOS
     string gameId = "3427062";
-    bool testMode = true;
+    #elif UNITY_ANDROID
+    string gameId = "3427063";
+    #endif
+
+    bool testMode = false;
 
     void Start()
     {
@@ -43,11 +48,6 @@ public class AdSetup : MonoBehaviour
         Advertisement.Banner.SetPosition(BannerPosition.CENTER);
     }
 
-    public void SetBannerPosition()
-    {
-        Advertisement.Banner.SetPosition(BannerPosition.CENTER);
-    }
-
     public void ShowVideoAd()
     {
         StartCoroutine(ShowAdWhenReady());
@@ -55,7 +55,7 @@ public class AdSetup : MonoBehaviour
 
     private IEnumerator ShowAdWhenReady()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
 
         Advertisement.Show();
     }

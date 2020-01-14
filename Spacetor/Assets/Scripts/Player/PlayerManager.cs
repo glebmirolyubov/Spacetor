@@ -24,7 +24,6 @@ public class PlayerManager : MonoBehaviour
         Time.timeScale = 1;
         Camera.main.orthographicSize = 1.5f;
         Camera.main.gameObject.GetComponent<EnemyDroneSpawner>().enabled = false;
-        PlayerPrefs.DeleteKey("Tutorial");
     }
 
     void Start()
@@ -51,6 +50,7 @@ public class PlayerManager : MonoBehaviour
         health = 0;
         SetBestScore();
         adSetup.ShowCenterBanner();
+        adSetup.ShowVideoAd();
         GetComponent<Animator>().SetTrigger("Death");
     }
 
@@ -92,7 +92,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Score"))
         {
-
             if (PlayerPrefs.GetInt("Score") < Score.score)
             {
                 PlayerPrefs.SetInt("Score", Score.score);
@@ -102,8 +101,8 @@ public class PlayerManager : MonoBehaviour
         } else
         {
             PlayerPrefs.SetInt("Score", Score.score);
+            storesSetup.PostScoreOnLeaderBoard(Score.score);
         }
-
     }
 
     public void CompleteTutorial()
