@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += transform.up * Time.deltaTime * 10f;
+        transform.position += transform.up * Time.deltaTime * 20f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

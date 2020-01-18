@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
 
 public class TurretRotation : MonoBehaviour
 {
+    public Slider ControlsSlider;
+
     private Touch touch;
     private Quaternion rotationZ;
     private float rotationSpeed = 0.2f;
 
     void FixedUpdate()
     {
+        transform.rotation = Quaternion.Slerp(Quaternion.Euler(0f, 0f, 90f), Quaternion.Euler(0f, 0f, -90f), ControlsSlider.value);
+
         /*
-        if (Input.GetMouseButton(0))
-        {
-            float XaxisRotation = Input.GetAxis("Mouse X") * 20;
-            //float YaxisRotation = Input.GetAxis("Mouse Y") * rotationSpeed;
-            transform.Rotate(Vector3.forward, XaxisRotation);
-        }
-        */
+        float XaxisRotation = CrossPlatformInputManager.GetAxis("Horizontal") * 20;
+        transform.Rotate(Vector3.forward, XaxisRotation);
+
 
         if (Input.touchCount > 0)
         {
@@ -25,9 +27,9 @@ public class TurretRotation : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                if (touchRatioY < 0.5f)
+                if (touchRatioY < 0.2f)
                 {
-                    rotationZ = Quaternion.Euler(0f, 0f, touch.deltaPosition.x * rotationSpeed);
+                    rotationZ = Quaternion.Euler(0f, 0f, -touch.deltaPosition.x * rotationSpeed);
                 } else
                 {
                     rotationZ = Quaternion.Euler(0f, 0f, -touch.deltaPosition.x * rotationSpeed);
@@ -38,6 +40,7 @@ public class TurretRotation : MonoBehaviour
             }
 
         }
+        */
     }
 
-    }
+}

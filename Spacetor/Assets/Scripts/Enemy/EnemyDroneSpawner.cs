@@ -13,9 +13,10 @@ public class EnemyDroneSpawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnEnemyDroneFirstWave", 2f, 3f);
-        InvokeRepeating("SpawnEnemyRocketDroneFirstWave", 30f, 15f);
-        InvokeRepeating("SpawnEnemyDroneSecondWave", 40f, 10f);
-        InvokeRepeating("SpawnEnemyRocketDroneSecondWave", 60f, 20f);
+        InvokeRepeating("SpawnEnemyRocketDroneFirstWave", 30f, 13f);
+        InvokeRepeating("SpawnEnemyDroneSecondWave", 40f, 6f);
+        InvokeRepeating("SpawnEnemyRocketDroneSecondWave", 60f, 16f);
+        InvokeRepeating("SpawnEnemyDroneThirdWave", 90f, 7f);
     }
 
     void SpawnEnemyDroneFirstWave()
@@ -30,7 +31,7 @@ public class EnemyDroneSpawner : MonoBehaviour
     void SpawnEnemyRocketDroneFirstWave()
     {
         xPoint = Random.Range(0.1f, 0.9f);
-        yPoint = Random.Range(0.8f, 0.95f);
+        yPoint = Random.Range(0.8f, 0.9f);
 
         Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
         Instantiate(RocketDronePrefab, spawnPoint, Quaternion.identity);
@@ -39,7 +40,7 @@ public class EnemyDroneSpawner : MonoBehaviour
     void SpawnEnemyDroneSecondWave()
     {
         xPoint = Random.Range(0.1f, 0.9f);
-        yPoint = Random.Range(0.1f, 0.35f);
+        yPoint = Random.Range(0.4f, 0.5f);
 
         Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
         Instantiate(DronePrefab, spawnPoint, Quaternion.identity);
@@ -49,10 +50,20 @@ public class EnemyDroneSpawner : MonoBehaviour
     void SpawnEnemyRocketDroneSecondWave()
     {
         xPoint = Random.Range(0.1f, 0.9f);
-        yPoint = Random.Range(0.1f, 0.2f);
+        yPoint = Random.Range(0.4f, 0.8f);
 
         Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
         Instantiate(RocketDronePrefab, spawnPoint, Quaternion.identity);
+    }
+
+    void SpawnEnemyDroneThirdWave()
+    {
+        xPoint = Random.Range(0.1f, 0.9f);
+        yPoint = Random.Range(0.4f, 0.8f);
+
+        Vector3 spawnPoint = Camera.main.ViewportToWorldPoint(new Vector3(xPoint, yPoint, 10));
+        Instantiate(DronePrefab, spawnPoint, Quaternion.identity);
+
     }
 
 }

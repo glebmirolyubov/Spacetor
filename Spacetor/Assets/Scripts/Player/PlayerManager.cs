@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject StartPanel;
     public GameObject ScoreObject;
     public GameObject TutorialPanel;
+    public GameObject ControlsSlider;
+    public Animation CameraHolder;
     public StoresSetup storesSetup;
     public EnemyDroneSpawner droneSpawner;
     public AdSetup adSetup;
@@ -49,6 +51,7 @@ public class PlayerManager : MonoBehaviour
         Instantiate(PlayerExplosion, Player.transform.position, Quaternion.identity);
         health = 0;
         SetBestScore();
+        ControlsSlider.SetActive(false);
         adSetup.ShowCenterBanner();
         adSetup.ShowVideoAd();
         GetComponent<Animator>().SetTrigger("Death");
@@ -58,6 +61,7 @@ public class PlayerManager : MonoBehaviour
     {
         Camera.main.GetComponent<Animator>().SetTrigger("StartGame");
         MusicSource.GetComponent<Animator>().SetTrigger("StartGame");
+        CameraHolder.Play();
         GetComponent<Animator>().SetTrigger("StartGame");
     }
 
@@ -77,6 +81,7 @@ public class PlayerManager : MonoBehaviour
         StartPanel.SetActive(false);
         HealthHolder.SetActive(true);
         ScoreObject.SetActive(true);
+        ControlsSlider.SetActive(true);
 
         if (PlayerPrefs.HasKey("Tutorial"))
         {
