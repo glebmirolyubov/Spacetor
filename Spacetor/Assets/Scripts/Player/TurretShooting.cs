@@ -23,14 +23,14 @@ public class TurretShooting : MonoBehaviour
             }
             else
             {
-                SpawnProjectile();
+                SpawnLeftProjectile();
                 time = 0.1f;
             }
 
         }
     }
 
-    public void SpawnProjectile()
+    public void SpawnLeftProjectile()
     {
         Instantiate(ProjectilePrefab, SpawnPoint.transform.position, Turret.transform.rotation);
     }
@@ -39,7 +39,7 @@ public class TurretShooting : MonoBehaviour
     {
         while (Input.touchCount > 0)
         {
-            SpawnProjectile();
+            SpawnLeftProjectile();
             yield return new WaitForSeconds(0.1f);
         }
     }

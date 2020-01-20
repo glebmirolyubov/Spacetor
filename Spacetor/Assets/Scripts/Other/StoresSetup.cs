@@ -7,7 +7,7 @@ public class StoresSetup : MonoBehaviour
     public bool loginSuccessful;
 
     #if UNITY_IOS
-    string leaderboardIDApple = "56035599";
+    string leaderboardIDApple = "SpacetorLeaderboard";
     #elif UNITY_ANDROID
     string leaderboardIDGoogle = "CgkIpsDJjIISEAIQAg";
     #endif

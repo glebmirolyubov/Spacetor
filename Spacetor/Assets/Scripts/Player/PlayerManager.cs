@@ -52,8 +52,24 @@ public class PlayerManager : MonoBehaviour
         health = 0;
         SetBestScore();
         ControlsSlider.SetActive(false);
-        adSetup.ShowCenterBanner();
-        adSetup.ShowVideoAd();
+
+        if (PlayerPrefs.HasKey("VideoAd"))
+        {
+            Debug.Log("Has key!");
+            if (PlayerPrefs.GetInt("VideoAd") == 1)
+            {
+                adSetup.ShowVideoAd();
+                PlayerPrefs.SetInt("VideoAd", 0);
+            } else
+            {
+                PlayerPrefs.SetInt("VideoAd", 1);
+            }
+        } else
+        {
+            adSetup.ShowVideoAd();
+            PlayerPrefs.SetInt("VideoAd", 0);
+        }
+
         GetComponent<Animator>().SetTrigger("Death");
     }
 
@@ -83,7 +99,7 @@ public class PlayerManager : MonoBehaviour
         ScoreObject.SetActive(true);
         ControlsSlider.SetActive(true);
 
-        if (PlayerPrefs.HasKey("Tutorial"))
+        if (PlayerPrefs.HasKey("NewTutorial"))
         {
             droneSpawner.enabled = true;
         } else
@@ -112,7 +128,7 @@ public class PlayerManager : MonoBehaviour
 
     public void CompleteTutorial()
     {
-        PlayerPrefs.SetInt("Tutorial", 1);
+        PlayerPrefs.SetInt("NewTutorial", 1);
         GetComponent<Animator>().SetTrigger("EndTutorial");
         TutorialPanel.SetActive(false);
         droneSpawner.enabled = true;

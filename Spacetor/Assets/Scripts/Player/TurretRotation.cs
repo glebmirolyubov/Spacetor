@@ -12,7 +12,9 @@ public class TurretRotation : MonoBehaviour
 
     void FixedUpdate()
     {
+
         transform.rotation = Quaternion.Slerp(Quaternion.Euler(0f, 0f, 90f), Quaternion.Euler(0f, 0f, -90f), ControlsSlider.value);
+        //transform.rotation = Quaternion.Euler(-90f, transform.rotation.eulerAngles.y, 0f);
 
         /*
         float XaxisRotation = CrossPlatformInputManager.GetAxis("Horizontal") * 20;
